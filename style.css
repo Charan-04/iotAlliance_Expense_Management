@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.tracking-text {
+  color: #555;
+}
+
+.left-container {
+  color: #fffefe;
+  height: 100vh;
+  background-image: linear-gradient(#1a2980, #26d0ce);
+  position: relative;
+}
+
+.right-container {
+  height: 100vh;
+  position: relative;
+}
+
+.header {
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+.sub-text {
+  font-size: 22px;
+}
+
+.month-container {
+  padding-top: 25%;
+  padding-left: 5%;
+  padding-right: 20%;
+}
+
+.calc-container {
+  padding-top: 12%;
+  padding-left: 5%;
+  padding-right: 10%;
+}
+
+.fs-white {
+  color: white;
+}
+
+.fs-dark-grey {
+  color: #5a5959;
+}
+
+.budget-container {
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  color: black;
+  font-size: 32px;
+}
+
+.month-amount {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#month-budget {
+  color: black;
+}
+
+.expense-row {
+  padding: 10px;
+}
+
+.expense-date {
+  color: #077cc1;
+}
+
+.expense-text {
+  color: #077cc1;
+}
+
+.expense-list {
+  overflow-y: hidden;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.expense-value {
+  text-align: end;
+}
+
+.expense-saving {
+  color: #039300;
+}
+
+.expense-cost {
+  color: #e40000;
+}
+
+.expense-investment {
+  color: #f48803;
+}
+
+.btn-submit-expense {
+  border-radius: 50%;
+  border: none;
+}
+
+#expense-chart {
+  margin: 10% 0;
+  height: 400px;
+  width: 400px;
+}
+
+.bottom-border {
+  border-bottom: solid 3px #005e99;
+}
+
+.dropdown-toggle {
+  background-color: #17a2b8;
+}
+
+.dropdown-toggle:hover {
+  background-color: #17a2b8;
+}
+
+.dropdown-toggle:active {
+  background-color: #17a2b8;
+}
+
+.dropdown-toggle.show {
+  background-color: #17a2b8;
+}
+
+.expense-chart {
+  height: 400px;
+  width: 400px;
+}
+
+#type-savings {
+  color: green;
+}
+
+#type-expense {
+  color: rgb(216, 16, 16);
+}
+
+#type-investment {
+  color: #f48803;
+}

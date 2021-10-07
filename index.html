@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- Roboto font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn(optional) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://img.favpng.com/0/1/7/vector-graphics-biological-hazard-illustration-logo-encapsulated-postscript-png-favpng-hpij78g6We1ujiYnMApNTgRY6.jpg"
+      type="image/x-icon"
+    />
+    <title>My Project</title>
+  </head>
+  <body>
+    <div class="row">
+      <!-- left container -->
+      <div class="col-4 left-container">
+        <div class="month-container">
+          <div class="header fs-white">Your Budget</div>
+          <div id="current-month" class="sub-text fs-white"></div>
+          <div class="budget-container p-2 mt-4">
+            ₹<span id="month-budget" class="month-amount"> 0</span>
+          </div>
+        </div>
+        <div class="chart-container">
+          <canvas id="expense-chart"></canvas>
+        </div>
+      </div>
+
+      <!-- right container -->
+      <div class="col-8 right-container">
+        <div class="calc-container">
+          <div class="header fs-dark-grey">Track Your Budget</div>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Expense Type
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" id="type-savings">Savings</a></li>
+              <li><a class="dropdown-item" id="type-expense">Expense</a></li>
+              <li>
+                <a class="dropdown-item" id="type-investment">Investment</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="mt-3 tracking-text text-capitalize sub-text bottom-border "
+          >
+            Tracking Savings 💰
+          </div>
+          <div class="row mt-4">
+            <div class="col-10">
+              <input
+                class="form-control input-expense-date"
+                type="date"
+                placeholder="Description" required
+              />
+          </div>
+          <div class="row ">
+            <div class="col-7">
+              <input
+                class="form-control input-expense-description"
+                type="text"
+                placeholder="Description" required
+              />
+            </div>
+            <div class="col-4">
+              <input
+                class="form-control input-expense-value"
+                type="number"
+                placeholder="Value"
+                min="0"
+                step="100" required
+              />
+            </div>
+            <div class="col-1">
+              <button type="button" class="btn btn-success btn-submit-expense checkBtn">
+                &check;
+              </button>
+            </div>
+          </div>
+          <div class="expense-list mt-4">
+              <div class="bottom-border list fs-grey row">
+                <div class="col-5 list-date"></div>
+                <div class="col-5 list-description"></div>
+                <div class="col-2 list-value"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chart.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
